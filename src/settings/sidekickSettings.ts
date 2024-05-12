@@ -6,8 +6,8 @@ export interface SidekickSettings{
 }
 
 export const DEFAULT_SETTINGS: SidekickSettings = {
-  enableStemming: true,
-  matchTags: true,
+  enableStemming: false,
+  matchTags: false,
   matchUnresolved: true,
   keywordsFilter: ""
 }
