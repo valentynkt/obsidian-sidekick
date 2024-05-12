@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import { Trie } from '@tanishiking/aho-corasick';
-
 import type { Indexer } from '../indexing/indexer';
 import { redactText } from './redactText';
 import { mapStemToOriginalText } from './mapStemToOriginalText';

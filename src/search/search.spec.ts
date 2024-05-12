@@ -1,5 +1,6 @@
 import { Indexer } from '../indexing/indexer';
 import Search from './index';
+import {DEFAULT_SETTINGS} from "~/settings/sidekickSettings";
 
 const getKeywordsMockFn = jest.fn();
 
@@ -24,7 +25,7 @@ describe('Search class', () => {
     const text = 'This is a note that I will be use for searching';
 
     const indexer = new Indexer(null);
-    const search = new Search(indexer);
+    const search = new Search(indexer, DEFAULT_SETTINGS);
     const results = search.find(text);
 
     expect(results).toEqual([
@@ -48,7 +49,7 @@ describe('Search class', () => {
     const text = 'I use GitHub Forks as part of my development flow';
 
     const indexer = new Indexer(null);
-    const search = new Search(indexer);
+    const search = new Search(indexer, DEFAULT_SETTINGS);
     const results = search.find(text);
 
     expect(results).toEqual([
@@ -66,7 +67,7 @@ describe('Search class', () => {
     const text = 'Designing a shared client record is a great idea but challenging';
 
     const indexer = new Indexer(null);
-    const search = new Search(indexer);
+    const search = new Search(indexer, DEFAULT_SETTINGS);
     const results = search.find(text);
 
     expect(results).toEqual([
