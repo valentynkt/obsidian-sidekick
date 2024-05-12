@@ -1,13 +1,11 @@
 import {App, PluginSettingTab, Setting} from "obsidian"
-import SuperchargedLinks from "main"
 import TagsAutosuggestPlugin from "~/index";
 
 export default class SicekickSettingsTab extends PluginSettingTab {
   plugin: TagsAutosuggestPlugin;
 
-  constructor(app: App, plugin: SuperchargedLinks) {
-    super(app, plugin);
-    this.plugin = plugin;
+  constructor(app: App) {
+    super(app);
   }
 
   display(): void {
